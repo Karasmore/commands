@@ -1,0 +1,16 @@
+npm install -g react-360-cli
+react-360 init ReactApp
+cd ReactApp
+npm install --force
+
+blacklist.js upravit
+
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+
+npm start 
+http://localhost:8081/index.html
